@@ -4,16 +4,16 @@
         <title>Add item</title>
     </head>
     <body>
-        <form id="addItemForm" role="form" method="get" action="/add">
+        <form id="addItemForm" role="form">
             <div class="form-group">
-            <table>
+            <table> 
                 <tr>
                     <label for="name">Food Name*: </label>
                     <input type="text" class="form-control" id="name" placeholder="Food Name" name="name">
                 </tr>
                 <tr>
-                    <td>Price*:</td>
-                    <td><input type="number" placeholder="Price" name=""></td>
+                    <td><label for="price">Price*:</label></td>
+                    <td><input type="number" class="form-control" id="price" placeholder="Price" name="price"></td>
                 </tr>
                 <tr>
                     <td>Where to store*:</td>
@@ -53,7 +53,8 @@
                 </tr>
             </table>
             </div>
-            <input type="submit" id="submitBtn" class="btn btn-default" value="Add!"></input>
+            <input type="submit" id="#newSubmit" class="btn btn-default" value="Add!"></input>
         </form>
+        <script src="/js/additem.js"></script>
     </body>
 </html>

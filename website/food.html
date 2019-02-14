@@ -1,7 +1,8 @@
 <html lang="en">
 <head>
     <title>happy save</title>
-	<script src="/js/jquery.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/require.js"></script>
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
@@ -42,7 +43,20 @@
         
         <body>
             <ul id="item"></ul>
+            <center>
+            <p>
+                Please add new items:
+            </p><p>
+                name: <input id="name" placeholder="Food Name">
+            </p><p>
+                price: <input id="price" placeholder="Price">
+            </p><p>
+                <button id="newSubmit">submit</button>
+            </p>
+            </center>
+            <!--
             <ul><a href="additem.html">Add item</a></ul>
+            -->
         </body> 
         <script>
             
@@ -56,7 +70,7 @@
                   var output = '';
                   for(var i=0;i<item.length;i++){
                       output += '<li>'+item[i].name+' $'+item[i].price+'</li>';
-                      output += '<p>'+item[i].weight+' '+item[i].unit+'</p>';
+                      //output += '<p>'+item[i].weight+' '+item[i].unit+'</p>';
                   }
                   document.getElementById('item').innerHTML = output;
                   
@@ -70,6 +84,6 @@
         <script src="/js/script.js"></script>
         <script src="/js/bootstrap.js"></script>
         <script src="/js/modernizr.js"></script>
-        
+        <script src="/js/additem.js"></script>
     </body>
 </html>

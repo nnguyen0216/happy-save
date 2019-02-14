@@ -1,12 +1,19 @@
-var data = require("../data.json");
+$(document).ready(function() {
+	setup();
+})
 
-exports.addItem = function(req, res) {
-	var inputName = req.query.name;
-	var inputPrice = req.query.price;
-	newitem = {
-		'name': inputName,
-		'price': inputPrice,
-	};
-	data.item.push(item);
-	res.render('index', data);
+function setup(){
+	console.log('Running');
+	$('#newSubmit').click(putNewItem);
+}
+
+function putNewItem(){
+	var name = document.getElementById('name').value;
+	var price = Number(document.getElementById('price').value);
+	console.log('Adding');
+	$.get('add/'+name+'/'+price, finished);
+}
+
+function finished(data) {
+	console.log(data);
 }
